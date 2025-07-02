@@ -425,12 +425,12 @@ $.getAll(URLs,
         html = `
         <tr>
             <th colspan=7>
-                <center>PP Purchase log</center>
-            </th>
+			<center>PP Hareket Geçmişi</center>
+			</th>
         </tr>
         <tr>
             <th colspan=7>
-            <center><h2>Total pp spent: ${-totalSpent} pp</h2></center>
+            <center><h2>Harcanan Toplam PP: ${-totalSpent} PP</h2></center>
             </th>
         </tr>
         <tr>
@@ -440,17 +440,17 @@ $.getAll(URLs,
         </tr>
         <tr>
             <th colspan=7>
-                <center><h2>Total pp bought: ${totalBought} pp</h2></center>
+                <center><h2>Toplam Satın Alınan PP: ${totalBought} pp</h2></center>
             </th>
         </tr>
         <tr>
             <th colspan=7>
-                <center><h2>Total gifts received: ${totalGiftsReceived} pp</h2></center>
+                <center><h2>Alınan Toplam Hediyeler: ${totalGiftsReceived} pp</h2></center>
             </th>
         </tr>
         <tr>
             <th colspan=7>
-                <center><h2>Total gifts sent: ${totalGiftsSent} pp</h2></center>
+                <center><h2>Gönderilen Toplam Hediyeler: ${totalGiftsSent} pp</h2></center>
             </th>
         </tr>
         <tr>
@@ -465,7 +465,7 @@ $.getAll(URLs,
         </tr>
         <tr>
             <th colspan=7>
-                <center><h2>Total refunds: ${totalRefunds} pp</h2></center>
+                <center><h2>Total iade: ${totalRefunds} pp</h2></center>
             </th>
         </tr>
         <tr>
