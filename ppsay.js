@@ -832,4 +832,3 @@ function displayCategory(category) {
             $("#" + allCategories[i] + "Button").attr("class", "btn evt-confirm-btn btn-confirm-yes");
         }
     }
-}
