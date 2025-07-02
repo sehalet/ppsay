@@ -262,18 +262,22 @@ $.getAll = function (
 ) {
     var numDone = 0;
     var lastRequestTime = 0;
-    var minWaitTime = 200; // ms between requests
     loadNext();
-    function loadNext() {
-        if (numDone == urls.length||skip==true) {
+function loadNext() {
+        if (numDone == urls.length || skip == true) {
             onDone();
             return;
         }
 
         let now = Date.now();
         let timeElapsed = now - lastRequestTime;
-        if (timeElapsed < minWaitTime) {
-            let timeRemaining = minWaitTime - timeElapsed;
+        // Rastgele gecikme için minimum ve maksimum değerler
+        let minRandomWait = 1500; // 1.5 saniye (minimum bekleme süresi)
+        let maxRandomWait = 3000; // 3 saniye (maksimum bekleme süresi)
+        let randomWaitTime = Math.floor(Math.random() * (maxRandomWait - minRandomWait + 1)) + minRandomWait;
+
+        if (timeElapsed < randomWaitTime) { // minWaitTime yerine randomWaitTime kullanın (SONDAKİ FAZLADAN { SİLİNDİ)
+            let timeRemaining = randomWaitTime - timeElapsed; // BURASI DÜZELTİLDİ (minWaitTime yerine randomWaitTime geldi)
             setTimeout(loadNext, timeRemaining);
             return;
         }
@@ -295,7 +299,6 @@ $.getAll = function (
                 onError(xhr);
             })
     }
-};
 
 
 $.getAll(URLs,
